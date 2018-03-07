@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+  
+<div ng-app="myApp" ng-controller="myController">
+    
+<h1>MyController</h1>
+    
+    
+<div ng-controller="parentController">
+      
+<h1>ParentController</h1>
+      
+<input ng-model="parentData.message" />
+      
+<button ng-click="broadcastEvent()">broadcast event from ParentController</button>
+      
+      
+<br><br>
+      
+      
+<div ng-controller="childController">
+      
+<h1>ChildController</h1>
+        
+<input ng-model="childData.message" />
+        
+<button ng-click="emitEvent()">emit event from ChildController</button>
+      
+</div>
+    
+</div>
+    
+       
+       
+ 
+</div>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body ng-app="">
+<fieldset>
+<legend>
+REGISTERATION</legend>
+<form>
+    First Name: <input type="text" ng-model="firstname">
+ <br>
+<br>
+    Last Name: <input type="text" ng-model="lastname">
+ <br> 
+    <h3>Full Name: {{firstname + " " + lastname}}</h3>
+Gender:
+  <input type="radio" ng-model="myVar" value="male">Male
+  <input type="radio" ng-model="myVar" value="female">Female
+<div ng-switch="myVar">
+  <div ng-switch-when="male">
+     <h3>Male</h3>
+  </div>
+<div ng-switch="myVar">
+  <div ng-switch-when="female">
+     <h3>Female</h3>
+  </div>
+<br>
+  Select the branch:
+  <select ng-model="myVar1">
+    <option value="">
+    <option value="it">IT
+    <option value="cse">CSE
+    <option value="ece">ECE
+    <option value="eee">EEE
+  </select>
+</form>
+
+<div ng-switch="myVar1">
+  <div ng-switch-when="it">
+     <h3>IT</h3>
+  </div>
+  <div ng-switch-when="cse">
+     <h3>CSE</h3>
+  </div>
+ <div ng-switch-when="ece">
+     <h3>ECE</h3>
+  </div>
+ <div ng-switch-when="eee">
+     <h3>EEE</h3>
+  </div>
+</div>
+
+<br>
+  Select the course:
+  <select ng-model="myVar2">
+    <option value="">
+    <option value="iot">IOT
+    <option value="imad">IMAD
+    <option value="ai">AI
+    <option value="mc">Machine Learning
+  </select>
+</form>
+
+<div ng-switch="myVar2">
+  <div ng-switch-when="iot">
+     <h3>IOT</h3>
+
+     <p>Introduction to IOT.</p>
+  </div>
+  <div ng-switch-when="imad">
+     <h3>IMAD</h3>
+     <p>Introduction to Modern Application Development</p>
+  </div>
+ <div ng-switch-when="ai">
+     <h3>AI</h3>
+     <p>Introduction to Artificial Intelligence</p>
+  </div>
+ <div ng-switch-when="mc">
+     <h3>Machine Learning</h3>
+     <p>Introduction to Machine Learning</p>
+  </div>
+</div>
+<br>
+<br>
+ Address: 
+<textarea ng-model="Address"
+rows="3"columns="3"> Address:</textarea>
+  <h3>Address: {{Address}}</h3>
+<br>
+Email: <input type="email" ng-model="email">
+<h3>Email: {{email}}</h3>
+<br>
+<input type="submit"
+name="submit">
+</fieldset>
+</body>
+</html>
